@@ -1,5 +1,5 @@
-from playwright.sync_api import Page, expect
 import pytest
+from playwright.sync_api import Page, expect
 
 test_data = [
     ("standard_user", "secret_sauce"),
@@ -8,7 +8,6 @@ test_data = [
     ("error_user", "secret_sauce"),
     ("visual_user", "secret_sauce")
 ]
-
 
 @pytest.mark.parametrize("username, password", test_data)
 def test_valid_login_scenarios(page: Page, username: str, password: str) -> None:

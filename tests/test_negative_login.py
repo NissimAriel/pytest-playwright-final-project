@@ -1,6 +1,7 @@
 import re
 from playwright.sync_api import Page, expect
 import pytest
+import allure
 
 testing_data = [
     ("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out."),
@@ -8,7 +9,6 @@ testing_data = [
     ("wrong_username", "", "Epic sadface: Password is required"),
     ("wrong_username", "wrong_username", "Epic sadface: Username and password do not match any user in this service"),
 ]
-
 
 @pytest.mark.parametrize("username, password, error_message", testing_data)
 def test_not_valid_login_scenarios(page: Page, username: str, password: str, error_message: str) -> None:

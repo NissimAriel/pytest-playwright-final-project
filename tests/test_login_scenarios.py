@@ -22,4 +22,3 @@ class TestLogin:
         error_message_element = self.login_page.get_error_message_element()
         expect(error_message_element).to_be_visible()
         expect(error_message_element).to_have_text(error_message)
-

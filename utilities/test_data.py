@@ -1,3 +1,4 @@
+
 base_url = "https://www.saucedemo.com/"
 after_login_url = "https://www.saucedemo.com/inventory.html"
 
